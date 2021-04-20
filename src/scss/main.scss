@@ -54,21 +54,14 @@ h3 {
   transition: opacity 0.3s ease;
   &:active {
     transform: scale(0.98);
-    outline: none;
   }
   &--green {
     background-color: colors.$cyan;
     box-shadow: 0 3px 10px hsla(171, 66%, 44%, 0.486);
-    &:focus {
-      outline: 2px dotted colors.$cyan;
-    }
   }
   &--blue {
     background-color: colors.$blue;
     box-shadow: 0 3px 10px hsla(233, 100%, 69%, 0.486);
-    &:focus {
-      outline: 2px dotted colors.$blue;
-    }
   }
 }
 /* snippets */
@@ -123,9 +116,6 @@ h3 {
     text-decoration: none;
     color: colors.$dark-grayish-blue;
     transition: color 0.3s ease;
-    &:focus {
-      outline: 1px dotted colors.$cyan;
-    }
   }
 }
 
@@ -138,9 +128,6 @@ h3 {
   text-decoration: none;
   color: colors.$dark-grayish-blue;
   font-size: 1.5rem;
-  &:focus {
-    outline: 1px dotted colors.$cyan;
-  }
 }
 .social--icon {
   transition: color 0.3s ease;
@@ -332,5 +319,18 @@ h3 {
 
   .social--icon:hover {
     color: colors.$cyan;
+  }
+
+  .social__link,
+  .nav__link {
+    &:focus {
+      outline: 1px dotted colors.$cyan;
+    }
+  }
+  .btn--green:focus {
+    outline: 2px dotted colors.$cyan;
+  }
+  .btn--blue:focus {
+    outline: 2px dotted colors.$blue;
   }
 }
